@@ -18,9 +18,10 @@ app = Dash()
 # App layout
 app.layout = [
     dcc.Graph(figure=px.line(df, x='Month', y='Number of Cases',
-                             title="AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024",
+                             title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
                              width=1200, height=800,
-                             template="simple_white"
+                             template='simple_white',
+                             color_discrete_map={'Number of Cases': 'Orange'},
     ))
 ]
 
