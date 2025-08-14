@@ -5,7 +5,7 @@
 
 
 # Import packages
-from dash import Dash, html, dash_table, dcc
+from dash import Dash, dcc, html
 import pandas as pd
 import plotly.express as px
 
@@ -19,10 +19,12 @@ app = Dash()
 app.layout = [
     dcc.Graph(figure=px.line(df, x='Month', y='Number of Cases',
                              title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
-                             width=1200, height=800,
+                             subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
+                             width=900, height=600,
                              template='simple_white',
-                             color_discrete_map={'Number of Cases': 'Orange'},
-    ))
+    )),
+    html.Div(children='Hat tip to Jeremy Singer-Vine\'s \"Data is Plural\" Newsletter'),
+    html.Div(children='Chart: Vasant Alex Laplam | Source: Damien Charlotin | Created with Dash'),
 ]
 
 # Run the app
