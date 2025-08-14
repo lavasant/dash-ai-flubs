@@ -11,7 +11,11 @@ Then in [Flourish](https://public.flourish.studio/visualisation/24516000/):
 
 Then I wanted to see if I could re-create the chart using Python, so I started playing with Dash and Plotly.
 
-To create the chart, run the app and then go to this address in your browser:
+Here's what I have as of August 14, 2025:
+
+![Dash chart](./images/dash_chart.png?raw=true "Title")
+
+To view the chart locally, run the app and then go to this address in your browser:
 http://127.0.0.1:8050/
 
 ## TODO:
