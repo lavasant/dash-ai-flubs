@@ -1,17 +1,15 @@
 # dash-ai-flubs
 An exercise in creating a customized line chart using Python libraries.
 
-I previously created this chart in Datawrapper:
+I previously created this chart in [Datawrapper](https://www.datawrapper.de/_/LpjxR/?v=2):
 
 ![Datawrapper chart](./images/datawrapper_chart.png?raw=true "Title")
 
-https://www.datawrapper.de/_/LpjxR/?v=2
-
-Then in Flourish:
+Then in [Flourish](https://public.flourish.studio/visualisation/24516000/):
 
 ![Flourish chart](./images/flourish_chart.png?raw=true "Title")
 
-https://public.flourish.studio/visualisation/24516000/
+Then I wanted to see if I could re-create the chart using Python, so I started playing with Dash and Plotly.
 
 To create the chart, run the app and then go to this address in your browser:
 http://127.0.0.1:8050/
