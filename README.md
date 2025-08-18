@@ -19,6 +19,6 @@ To view the chart locally, run the app and then go to this address in your brows
 http://127.0.0.1:8050/
 
 ## TODO:
-- Add files that clean Charlotin dash_table
 - Change line color on plotly chart
 - Add shaded rectangle on plotly chart
+- Refactor getcasesbymonth.py
