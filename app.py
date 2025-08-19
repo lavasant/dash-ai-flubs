@@ -26,8 +26,11 @@ fig.update_traces(line_color='#ffa500')
 # App layout
 app.layout = [
     dcc.Graph(figure=fig),
-    html.Div(children='Hat tip to Jeremy Singer-Vine\'s \"Data is Plural\" Newsletter'),
-    html.Div(children='Chart: Vasant Alex Laplam | Source: Damien Charlotin | Created with Dash'),
+    html.Div([
+        html.P('Hat tip to Jeremy Singer-Vine\'s \"Data is Plural\" Newsletter'),
+        html.P(['Chart: ', html.A('Vasant Alex Laplam', href='https://www.lavasant.com'), ' | Source: Damien Charlotin | Created with Dash'
+        ]),
+    ]),
 ]
 
 
