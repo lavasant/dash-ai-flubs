@@ -15,17 +15,21 @@ df = pd.read_csv('csv/Charlotin-hallucination_cases - Plotly Data.csv')
 # Initialize the app
 app = Dash()
 
+fig=px.line(df, x='Month', y='Number of Cases',
+                         title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
+                         subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
+                         width=900, height=600,
+                         template='simple_white')
+
+fig.update_traces(line_color='#ffa500')
+
 # App layout
 app.layout = [
-    dcc.Graph(figure=px.line(df, x='Month', y='Number of Cases',
-                             title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
-                             subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
-                             width=900, height=600,
-                             template='simple_white',
-    )),
+    dcc.Graph(figure=fig),
     html.Div(children='Hat tip to Jeremy Singer-Vine\'s \"Data is Plural\" Newsletter'),
     html.Div(children='Chart: Vasant Alex Laplam | Source: Damien Charlotin | Created with Dash'),
 ]
+
 
 # Run the app
 if __name__ == '__main__':
