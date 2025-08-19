@@ -22,6 +22,17 @@ fig=px.line(df, x='Month', y='Number of Cases',
 
 fig.update_traces(line_color='#ffa500')
 
+fig.add_shape(type='rect',
+    xref='x', yref='y',
+    x0=17, y0=0,
+    x1=25, y1=43,
+    line=dict(
+        color='#c0c0c0',
+        width=3,
+    ),
+    fillcolor='#c0c0c0',
+)
+
 # App layout
 app.layout = [
     dcc.Graph(figure=fig),
