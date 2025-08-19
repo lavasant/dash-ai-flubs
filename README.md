@@ -11,7 +11,7 @@ Then in [Flourish](https://public.flourish.studio/visualisation/24516000/):
 
 Then I wanted to see if I could re-create the chart using Python, so I started playing with Dash and Plotly.
 
-Here's what I have as of August 14, 2025:
+Here's what I have as of August 19, 2025:
 
 ![Dash chart](./images/dash_chart.png?raw=true "Title")
 
