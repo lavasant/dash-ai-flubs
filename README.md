@@ -20,5 +20,4 @@ http://127.0.0.1:8050/
 
 ## TODO:
 - Add shaded rectangle on plotly chart
-- Add links in footer
 - Refactor getcasesbymonth.py
