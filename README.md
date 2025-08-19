@@ -19,6 +19,4 @@ To view the chart locally, run the app and then go to this address in your brows
 http://127.0.0.1:8050/
 
 ## TODO:
-- Remove axes labels
-- Clean up ticks on x-axis
 - Refactor getcasesbymonth.py

@@ -18,9 +18,11 @@ app = Dash()
 fig=px.line(df, x='Month', y='Number of Cases',
             title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
             subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
-            width=900, height=600, template='simple_white')
+            width=900, height=600, template='simple_white',
+            labels={'Number of Cases': '', 'Month': ''})
 
 fig.update_traces(line_color='#ffa500')
+fig.update_xaxes(tickvals=[1, 8, 13, 20, 25])
 
 fig.add_shape(type='rect',
     xref='x', yref='y',
