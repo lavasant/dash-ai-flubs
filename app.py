@@ -16,10 +16,9 @@ df = pd.read_csv('csv/Charlotin-hallucination_cases - Plotly Data.csv')
 app = Dash()
 
 fig=px.line(df, x='Month', y='Number of Cases',
-                         title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
-                         subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
-                         width=900, height=600,
-                         template='simple_white')
+            title='AI Flubs in Court Cases Have Been Steadily Rising Since Late 2024',
+            subtitle='Legal decisions in cases where generative AI produced hallucinated content.',
+            width=900, height=600, template='simple_white')
 
 fig.update_traces(line_color='#ffa500')
 
@@ -28,8 +27,13 @@ app.layout = [
     dcc.Graph(figure=fig),
     html.Div([
         html.P('Hat tip to Jeremy Singer-Vine\'s \"Data is Plural\" Newsletter'),
-        html.P(['Chart: ', html.A('Vasant Alex Laplam', href='https://www.lavasant.com'), ' | Source: Damien Charlotin | Created with Dash'
-        ]),
+        html.P(['Chart: ',
+                html.A('Vasant Alex Laplam', href='https://www.lavasant.com'),
+                ' | Source: ',
+                html.A('Damien Charlotin', href='https://www.damiencharlotin.com/hallucinations/'),
+                ' | Created with ',
+                html.A('Dash', href='https://pypi.org/project/dash/')
+              ])
     ]),
 ]
 
